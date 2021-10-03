@@ -16,6 +16,275 @@ html {
   font-size: 1em;
   line-height: 1.4;
 }
+h1,h2,h3,p {
+  font-family: roboto;
+}
+a{
+  text-decoration: none;
+}
+p{
+  text-align: justify;
+}
+/* -------------Header-------------------- */
+header{
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+}
+#logoNav{
+  width: 18%
+}
+header h1{
+  font-weight: bolder;
+  font-size: x-large;
+  color: rgb(0, 0, 0);
+  margin-bottom: 0;
+}
+#sousTitre{
+  align-self: flex-end;
+  text-align: center;
+  font-size: x-small;
+  font-weight: bold;
+  margin: 0;
+}
+#menuBurger{
+  display: flex;
+  justify-content: center;
+  margin: 0.5em 0;
+}
+header button{
+  background-color: rgb(0, 0, 0);
+  border: none;
+  color: white;
+  padding: 0 16px;
+}
+/* -------------NAV-------------------- */
+nav{
+  background-color: rgb(0, 0, 0);
+}
+.containerNav{ 
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+}
+nav ul{
+  padding: 0;
+}
+#navFav{
+  border: 1px solid rgb(0, 0, 0);
+  list-style: none;
+}
+.user{
+  width: 5%;
+  margin-left: 4em;
+  padding: 0.5em 0.5em;
+  border: 1px solid white;
+}
+.containerSearch{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.5em;
+}
+nav input{
+  border-radius: 0%;
+  border: white;
+}
+nav button{
+  background-color: white;
+  border: none;
+  border-left: solid;
+  padding: 0 16px;
+}
+/* -------------Pub-------------------- */
+.banner{
+  display: flex;
+  justify-content: center;
+}
+#pub{
+  width: 100vw;
+  border-bottom: 4px solid black;
+}
+/* -------------MAIN 1-------------------- */
+main, section{
+  border-bottom: 2px solid black;
+}
+.titre{
+  display: flex;
+  justify-content: center;
+}
+h2{
+  color: rgb(71, 71, 71);
+  margin-top: 0.5em;
+}
+.categorieImg{
+  display: flex;
+  justify-content: center;
+  height: 20vh;
+}
+.categorieTitre{
+  display: flex;
+  justify-content: center;
+}
+h3{
+  margin: 0;
+  text-decoration: underline;
+}
+main ul{
+  display:flex;
+  flex-direction: column;
+  margin:0 0 2em 0;
+  padding-left: 0;
+}
+main ul li{
+  align-self: center;
+}
+/* -------------Nouveautes-------------------- */
+#new{
+  margin-bottom: 2em;
+}
+#txtNouveaute{
+  text-align: center;
+}
+#price{
+  font-weight: bolder;
+  font-size: large;
+}
+/* -------------Destockage-------------------- */
+#btnMain{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+#btnMain button{
+  background-color: rgb(247 255 4);
+  
+  padding: 8px 32px;
+}
+/* -------------Réseaux sociaux-------------------- */
+.containerRS{
+  margin-bottom: 2em;
+}
+#rsImg{
+  display: flex;
+  justify-content: space-evenly;
+}
+#rsImg img{
+  height: 10vh;
+}
+/* -------------FOOTER-------------------- */
+footer{
+  border-top: 2px solid black;
+}
+footer li{
+  list-style-type: none;
+  font-weight: bold;
+}
+#textMap{
+  text-align: center;
+}
+#map{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+#map iframe{
+  border: 2px solid black;
+}
+#footer{
+  background-color: rgb(247 255 4);
+  padding: 0.5em 0 1em 0;
+  display: flex;
+  justify-content: space-around;
+  border-top:2px solid black ;
+}
+#footer a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+#footer a:hover{
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-decoration: underline;
+}
+#me{
+  background-color: rgb(247 255 4);
+  border-top:2px solid black ;
+  font-weight: bold;
+  font-size: x-small;
+  margin: 0;
+  padding: 0.5em ;
+}
+/************************* Page Produit *************************/
+#accueil{
+  align-self: center;
+}
+#accueil button{
+  align-self: center;
+  padding: 16px;
+}
+#prixProduit{
+  margin:0 0 1em 1em;
+}
+/* -------------Avis Client-------------------- */
+#avisClient{
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 1em;
+}
+.stars{
+  align-self: center;
+}
+/* -------------Descriptif-------------------- */
+#descriptif{
+  margin: 0 0.5em 0 0.5em;
+}
+/* -------------Caractéristiques-------------------- */
+.caracteristiqueImg{
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+}
+#logoMSI{
+  align-self: center;
+  width: 30%;
+  height: auto;
+}
+#caracteristique {
+  padding-left: 1em; 
+}
+#caracteristique li{
+  font-size: small;
+  align-self: flex-start;
+}
+
+/************************* Page Entreprise *************************/
+#imgDirector{
+  border-radius: 50%;
+  margin-top: 1em;
+}
+#histoire{
+  margin: 2em 1em 2em 1em;
+  padding: 0.5em;
+  border: thick double #000000;
+}
+.histoireQuestion{
+  text-decoration: underline;
+  font-weight: bold;
+}
+#containerDirector{
+  padding: 1em;
+}
+#director{
+  font-weight: bolder;
+  text-decoration: underline;
+}
+#motDirector{
+  font-style: italic;
+}
+
+
+
 
 /*
  * Remove text-shadow in selection highlight:
