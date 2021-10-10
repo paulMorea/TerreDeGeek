@@ -54,53 +54,51 @@
     </div>
   </nav>
 <!-- ############################ Qui sommes-nous? ######################## -->
-<div class="titre">
-    <h2>Qui Sommes-nous ?</h2>
-</div>   
-<div class="categorieImg">
-    <img src="img/logo.TDG.png" alt="">
-</div>
 
-<!-- ############################ Histoire ######################## -->
-<main>
-    
-    <div id="histoire">
-      <div class="titre">
-        <h3>Notre Histoire :</h3>
-      </div>
-      <p>TerreDeGeek SARL est une entreprise familiale de vente de produits électroniques (téléphonie,
-        informatique, produits dérivés etc.) dont le siège se situe à Evreux. Elle détient à l’heure actuelle 40 % du marché en Normandie.
-        Elle est notamment présente à Dieppe, Forge les eaux, Louviers et Alençon.</p>
-        <p><span class="histoireQuestion" >Quel est l’ADN de TerreDeGeek ?</span><br>L’entreprise est née d’une volonté, proposer du matériel et des
-        produits dérivés de qualité dans un cadre jeune et dynamique.<br>
-        <span class="histoireQuestion">Son ambition ?</span> <br>Devenir le leader Ecommerce de la vente de produits
-        électroniques dans l’Ouest de la France.</p> 
+<section>
+    <form action="/my-handling-form-page" method="post">
+    <div>
+        <label for="name">Prénom :</label>
+        <input type="text" id="firstName" name="user_firstname" maxlength="40" minlength="2" required="required"/>
+        </div>
+    <div>
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="user_name" maxlength="40" minlength="2" required="required"/>
     </div>
-</main>
-  
-<!-- ############################ Président ######################## -->
-<div class="categorieImg">
-  <img id="imgDirector"src="img/director-tdg.jpg" alt="">
-</div>
-<div id="containerDirector">
-<p><span id="director">Le mot de Monsieur DERMAIN (PDG) :</span><br>
-  <span id="motDirector">"Chez Terre De Geek, faire partie des leaders n'est pas un « simple mot », ni même une place facile... C'est avant tout une culture, une ligne de conduite, un esprit, une vision qui se traduisent par une recherche permanente d'excellence et un engagement constant de qualité pour nos clients et partenaires."</span></p>
-</div>
-<!-- ############################ Vidéo ######################## -->
-<hr>
-<div id="mapContainer">
-  <div class="titre">
-    <h3>Vidéo de présentation :</h3>
-  </div>
-  <div id="map">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/cQ7jyg-iZtI?start=326" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</div>
-</div>
+    <div>
+        <label for="name">téléphone :</label>
+        <input type="text" id="phone" name="user_phone" />
+    </div>
+    <div>
+        <label for="mail">E-mail :</label>
+        <input type="email" id="mail" name="user_email" required="required"/>
+    </div>
+    <div>
+        <label for="name">Âge :</label>
+        <input type="text" id="age" name="user_age" />
+    </div>
+    <label for="object-select">objet du contact :</label>
+        <select name="objects" id="object-select" required="required">
+            <option value="">--Merci de choisir--</option>
+            <option value="information">information</option>
+            <option value="reclamation">réclamation</option>
+            <option value="partenariat">partenariat</option>
+            <option value="autre">autre</option>
+        </select>
+    <div>
+        <label for="msg">Message:</label>
+        <textarea id="msg" name="user_message"required="required"></textarea>
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+    </form>
+</section>
+
 <!-- ############################ FOOTER ######################## -->
 <div id="footer">
     <a href="">Mentions légales</a>
-    <a href="">Qui sommes-nous?</a>
+    <a href="entreprise.html">Qui sommes-nous?</a>
     <a href="">L'équipe</a>
 </div>
 

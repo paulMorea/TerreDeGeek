@@ -29,21 +29,39 @@
 <body>
   <!-- ########################## HEADER ######################## -->
 <header>
-  <img id="logoNav" src="img/logo.TDG.png" alt="">
-    <div>
-  <h1>Terre De Geek</h1>
-    <p id="sousTitre">Hight-Tech</p>
+  <div id="marqueContainer">
+    <div id="logoContainer">
+      <div>
+        <img id="logoNav" src="img/logo.TDG.png" alt="">
+      </div>
+    </div>
+    <div id="marque">
+      <h1>Terre De Geek</h1>
+      <p id="sousTitre">Hight-Tech</p>
+    </div>
   </div>
-  <div id="menuBurger"><button>Menu</button></div>
+  <div id="menuBurger">
+    <!-- <button>Menu</button> -->
+    <ul id="menu-accordeon">
+      <li><a href="#">Menu</a>
+         <ul>
+            <li><a href="prestations.html">Nos prestations</a></li>
+            <li><a href="formulaire.html">Nous écrire</a></li>
+            <li><a href="#">Offres spéciales</a></li>
+            <li><a href="#">Besoin d'aide?</a></li>
+         </ul>
+      </li>
+    </ul>
+  </div>  
 </header>
 <!-- ############################ NAV ######################## -->
 <nav>
   <div class="containerNav">
     <ul>
       <li id="navFav">
-        <a href=""><img class="user" src="img/map-marker.png" alt=""></a>
-        <a href=""><img class="user" src="img/user.png" alt=""></a>
-        <a href=""><img class="user" src="img/shopping-bag.png" alt=""></a>
+        <a href="" class="fav"><img class="user" src="img/map-marker.png" alt=""></a>
+        <a href="" class="fav"><img class="user" src="img/user.png" alt=""></a>
+        <a href="" class="fav"><img class="user" src="img/shopping-bag.png" alt=""></a>
       </li>
     </ul>
   </div>
@@ -58,62 +76,67 @@
 </div>
 <!-- ############################ MAIN 1 ######################## -->
 <main>
-<div class="titre">
-  <h2>CATÉGORIES</h2>
-</div>
-  <div class="categorieImg">
-    <img src="img/ordianteaur.PNG" alt="">
+  <div class="titre">
+    <h2>CATÉGORIES</h2>
   </div>
-  <div class="categorieTitre">
-    <h3>Ordinateurs :</h3>
-  </div>
-    <ul>
-      <li><a href="produit.html">Ordinateur portable</a></li> 
-      <li><a href="produit.html">PC Gamer</a></li>
-      <li><a href="produit.html">PC Bureau</a></li>
-      <li><a href="produit.html">Serveur</a></li>
-    </ul>
-  <div>
+  <div class="categorieContainer">
+    <div class="categorie">
+      <div class="categorieImg">
+        <img src="img/ordianteaur.PNG" alt="">
+      </div>
+      <div class="categorieTitre">
+        <h3>Ordinateurs :</h3>
+      </div>
+      <ul>
+        <li><a href="produit.html">Ordinateur portable</a></li> 
+        <li><a href="produit.html">PC Gamer</a></li>
+        <li><a href="produit.html">PC Bureau</a></li>
+        <li><a href="produit.html">Serveur</a></li>
+      </ul>
+    </div>
+    <div class="categorie">
+      <div class="categorieImg">
+        <img src="img/ecran-pc.PNG" alt="">
+      </div>
+      <div class="categorieTitre">
+        <h3>Écrans :</h3>
+      </div>
+      <ul>
+        <li><a href="produit.html">Télévision</a></li>
+        <li><a href="produit.html">Écran Pc</a></li>
+        <li><a href="produit.html">Écran Gamer</a></li>
+        <li><a href="produit.html">Décodeur TnT</a></li>
+      </ul>
+    </div>
+    <div class="categorie">
+      <div class="categorieImg">
+        <img src="img/ecouteur.PNG" alt="">
+      </div>
+      <div class="categorieTitre">
+        <h3>Audio :</h3>
+      </div>
+      <ul>
+        <li><a href="produit.html">Lecteur MP3</a></li>
+        <li><a href="produit.html">Casque</a></li>
+        <li><a href="produit.html">Enceinte</a></li>
+        <li><a href="produit.html">Radio</a></li>
+      </ul>
+    </div>
+    <div>
+    <div class="categorie">
     <div class="categorieImg">
-      <img src="img/ecran-pc.PNG" alt="">
+      <img src="img/imprimante.PNG" alt="">
     </div>
     <div class="categorieTitre">
-      <h3>Écrans :</h3>
+      <h3>Périphériques :</h3>
     </div>
-    <ul>
-      <li><a href="produit.html">Télévision</a></li>
-      <li><a href="produit.html">Écran Pc</a></li>
-      <li><a href="produit.html">Écran Gamer</a></li>
-      <li><a href="produit.html">Décodeur TnT</a></li>
-    </ul>
-  </div>
-  <div>
-    <div class="categorieImg">
-      <img src="img/ecouteur.PNG" alt="">
+      <ul>
+        <li><a href="produit.html">Stockage externe</a></li>
+        <li><a href="produit.html">Imprimante</a></li>
+        <li><a href="produit.html">Clavier</a></li>
+        <li><a href="produit.html">Souris</a></li>
+      </ul>
     </div>
-    <div class="categorieTitre">
-      <h3>Audio :</h3>
-    </div>
-    <ul>
-      <li><a href="produit.html">Lecteur MP3</a></li>
-      <li><a href="produit.html">Casque</a></li>
-      <li><a href="produit.html">Enceinte</a></li>
-      <li><a href="produit.html">Radio</a></li>
-    </ul>
-  </div>
-  <div>
-  <div class="categorieImg">
-    <img src="img/imprimante.PNG" alt="">
-  </div>
-  <div class="categorieTitre">
-    <h3>Périphériques :</h3>
-  </div>
-    <ul>
-      <li><a href="produit.html">Stockage externe</a></li>
-      <li><a href="produit.html">Imprimante</a></li>
-      <li><a href="produit.html">Clavier</a></li>
-      <li><a href="produit.html">Souris</a></li>
-    </ul>
   </div>
 </main>
 <!-- ############################ Nouveautes ######################## -->
@@ -155,21 +178,26 @@
 <!-- ############################ FOOTER ######################## -->
 <footer>
   <div class="titre">
-    <h2>NOUS CONTACTER</h2>
+    <h2>NOUS TROUVER</h2>
   </div>
   <div>
     <div class="categorieImg">
       <img src="img/logo.TDG.png" alt="">
     </div>
-    <ul>
-      <li><i class="fas fa-map-pin"></i>  135 rue du Madrillet, Évreux</li>
-      <li><i class="fas fa-phone-volume"></i> 06.06.06.06.06</li>
-      <li><i class="fas fa-paper-plane"></i>  tdg@contact.fr</li>
-    </ul>
-  </div>
-  <p id="textMap">Où nous trouver dans l'Univers :  <i class="fas fa-rocket"></i></p>
-  <div id="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1809.9674220016573!2d1.071517623947814!3d49.3916594600237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x73a65228cf4c2fbf!2sAFPA!5e0!3m2!1sfr!2sfr!4v1633028790172!5m2!1sfr!2sfr" width="300" height="225" style="border:1;" allowfullscreen="" loading="lazy"></iframe>
+  <div class="contactContainer">
+    <div id="adressContainer">
+      <ul>
+        <li><i class="fas fa-map-pin"></i>  135 rue du Madrillet, Évreux</li>
+        <li><i class="fas fa-phone-volume"></i> 06.06.06.06.06</li>
+        <li><i class="fas fa-paper-plane"></i>  tdg@contact.fr</li>
+      </ul>
+    </div>
+    <div id="mapContainer">
+      <p id="textMap">Où nous trouver dans l'Univers :  <i class="fas fa-rocket"></i></p>
+      <div id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1809.9674220016573!2d1.071517623947814!3d49.3916594600237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x73a65228cf4c2fbf!2sAFPA!5e0!3m2!1sfr!2sfr!4v1633028790172!5m2!1sfr!2sfr" width="300" height="225" style="border:1;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
   </div>
 <div id="footer">
     <a href="">Mentions légales</a>

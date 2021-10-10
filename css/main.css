@@ -10,13 +10,14 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  margin: 0;
+  padding: 0;
 }
-h1,h2,h3,p {
+h1,h2,h3,p,label,input,button,select {
   font-family: roboto;
 }
 a{
@@ -27,12 +28,20 @@ p{
 }
 /* -------------Header-------------------- */
 header{
-  height: 10vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  position: relative;
+  z-index: 999;
+}
+#marqueContainer{
+  display: flex;
+  flex-direction: row;
 }
 #logoNav{
-  width: 18%
+  max-height: 100%;
+}
+#marque{
+  align-self: center;
 }
 header h1{
   font-weight: bolder;
@@ -49,8 +58,11 @@ header h1{
 }
 #menuBurger{
   display: flex;
-  justify-content: center;
-  margin: 0.5em 0;
+  align-items: center;
+  margin: 0.5em 2em;
+}
+#monselect{
+  padding: 10px;
 }
 header button{
   background-color: rgb(0, 0, 0);
@@ -58,14 +70,78 @@ header button{
   color: white;
   padding: 0 16px;
 }
+@media (min-width: 1280px) { 
+  header{
+    justify-content:space-between;
+  }
+}
+/* menu */
+#menu-accordeon {
+  padding:0;
+  margin:0;
+  list-style:none;
+  text-align: center;
+  width: 25vw;
+}
+#menu-accordeon ul {
+  background-color: white;
+  position: absolute;
+  width: 25%;
+  z-index: 1000;
+  padding:0;
+  margin:0;
+  list-style:none;
+  text-align: center;
+}
+#menu-accordeon li {
+   border-radius: 2px;
+   margin-bottom:2px;
+   box-shadow:  0px 1px 7px -2px rgb(247 255 4);
+   border:solid 1px #000000;
+}
+#menu-accordeon li li {
+   max-height:0;
+   overflow: hidden;
+   transition: all .5s;
+   border-radius:0;
+   background: rgb(255, 255, 255);
+   box-shadow: none;
+   border:none;
+   margin:0;
+   font-size:x-small;
+   font-weight: bold;
+}
+#menu-accordeon a {
+  display:block;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  padding: 8px 0;
+  font-family: roboto;
+  font-size:1.2em
+}
+#menu-accordeon ul li a, #menu-accordeon li:hover li a {
+  font-size:1em
+}
+#menu-accordeon li:hover {
+   background: #ffffff00
+}
+#menu-accordeon li li:hover {
+   background: #999;
+}
+#menu-accordeon ul li:last-child {
+   border-radius: 0 0 6px 6px;
+   border:none;
+}
+#menu-accordeon li:hover li {
+  max-height: 15em;
+}
 /* -------------NAV-------------------- */
 nav{
   background-color: rgb(0, 0, 0);
 }
-.containerNav{ 
+.containerNav{
   display: flex;
   justify-content: center;
-  height: 10vh;
 }
 nav ul{
   padding: 0;
@@ -73,9 +149,12 @@ nav ul{
 #navFav{
   border: 1px solid rgb(0, 0, 0);
   list-style: none;
+  max-width: 100%;
+  height:10vh;
 }
 .user{
   width: 5%;
+  height: auto;
   margin-left: 4em;
   padding: 0.5em 0.5em;
   border: 1px solid white;
@@ -95,14 +174,33 @@ nav button{
   border-left: solid;
   padding: 0 16px;
 }
+@media (min-width: 1280px) { 
+  nav{
+    display: flex;
+    justify-content:space-between;
+    }
+  .containerSearch{
+    display: flex;
+    align-items: center;
+    width: 50vh;
+  }
+}
 /* -------------Pub-------------------- */
 .banner{
   display: flex;
   justify-content: center;
 }
 #pub{
-  width: 100vw;
+  max-width: 100%;
   border-bottom: 4px solid black;
+}
+@media (min-width: 1280px) { 
+  .banner{
+    border-bottom: 4px solid black;
+  }
+  #pub{
+    border-bottom: 0;
+  }
 }
 /* -------------MAIN 1-------------------- */
 main, section{
@@ -119,6 +217,7 @@ h2{
 .categorieImg{
   display: flex;
   justify-content: center;
+  max-height: 100%;
   height: 20vh;
 }
 .categorieTitre{
@@ -132,11 +231,26 @@ h3{
 main ul{
   display:flex;
   flex-direction: column;
-  margin:0 0 2em 0;
+  margin:2em 4em 2em 4em;
   padding-left: 0;
+  background-color: black;
 }
 main ul li{
   align-self: center;
+  list-style: none;
+}
+main ul li a{
+  color: white;
+}
+main ul li a:hover{
+  color: black;
+  background-color: white;
+}
+@media (min-width: 1280px) { 
+  .categorieContainer{
+    display: flex;
+    justify-content: space-evenly;
+  }
 }
 /* -------------Nouveautes-------------------- */
 #new{
@@ -157,7 +271,6 @@ main ul li{
 }
 #btnMain button{
   background-color: rgb(247 255 4);
-  
   padding: 8px 32px;
 }
 /* -------------Réseaux sociaux-------------------- */
@@ -167,8 +280,7 @@ main ul li{
 #rsImg{
   display: flex;
   justify-content: space-evenly;
-}
-#rsImg img{
+  max-width: 100%;
   height: 10vh;
 }
 /* -------------FOOTER-------------------- */
@@ -214,6 +326,22 @@ footer li{
   font-size: x-small;
   margin: 0;
   padding: 0.5em ;
+}
+@media (min-width: 1280px) { 
+  .contactContainer{
+    display: flex;
+    margin: 3em 30% 3em 30%;
+    border: thick double black;
+    padding: 0;
+  }
+  #adressContainer{
+    align-self: center;
+    line-height: 4em;
+    font-size: 18px;
+  }
+  #mapContainer{
+    margin-left: 2em;
+  }
 }
 /************************* Page Produit *************************/
 #accueil{
@@ -283,6 +411,76 @@ footer li{
   font-style: italic;
 }
 
+/************************* Page formulaire *************************/
+form {
+  /* Uniquement centrer le formulaire sur la page */
+  margin: 2em auto;
+  width: 75%;
+  /* Encadré pour voir les limites du formulaire */
+  padding: 1em;
+  border: 1px solid #CCC;
+  display: flex;
+  justify-content: ce;
+  flex-direction: column;
+}
+
+form div {
+  margin-top: 1em;
+}
+
+label {
+  /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+}
+
+input, textarea, select{
+  /* Pour s'assurer que tous les champs texte ont la même police.
+     Par défaut, les textarea ont une police monospace */
+  font: 1em sans-serif;
+
+  /* Pour que tous les champs texte aient la même dimension */
+  width: 100%;
+  box-sizing: border-box;
+
+  /* Pour harmoniser le look & feel des bordures des champs texte */
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  /* Pour souligner légèrement les éléments actifs */
+  border-color: #000;
+}
+
+textarea {
+  /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+  vertical-align: top;
+
+  /* Pour donner assez de place pour écrire du texte */
+  height: 5em;
+}
+
+.button {
+  /* Pour placer le bouton à la même position que les champs texte */
+  padding-left: 90px; /* même taille que les étiquettes */
+}
+
+button {
+  /* Cette marge supplémentaire représente grosso modo le même espace que celui
+     entre les étiquettes et les champs texte */
+  margin-left: .5em;
+}
+
+
+
+/************************* Page prestations *************************/
+
+table,td {
+    border: 1px solid #333;
+    margin: 1em;
+    text-align: center;
+}
 
 
 
